@@ -26,7 +26,7 @@ else:
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.send_message(message.chat.id, "Приветсвую!\nОтправьте мне только фамилию учителя и я напишу вам в каком кабинете в данный момент он находится.".format(message.from_user, bot.get_me()), parse_mode='html')
+    bot.send_message(message.chat.id, "Приветствую!\nОтправьте мне только фамилию учителя и я напишу вам в каком кабинете в данный момент он находится.".format(message.from_user, bot.get_me()), parse_mode='html')
 
 @bot.message_handler(func=lambda m:True)
 def search_teacher(message):
